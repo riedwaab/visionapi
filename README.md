@@ -1,5 +1,4 @@
 # visionapi
-Azure Vision API Test build
 This is a test build of the Azure Vision API. It analyses all JPG files in a partiular directory. The output is displayed on screen and the JSON is written to a .json file with the name name as the image.
 
 ## Requirements
