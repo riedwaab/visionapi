@@ -1,0 +1,69 @@
+{
+    "categories": [
+        {
+            "name": "people_",
+            "score": 0.3203125,
+            "detail": {
+                "celebrities": []
+            }
+        },
+        {
+            "name": "people_group",
+            "score": 0.671875,
+            "detail": {
+                "celebrities": []
+            }
+        }
+    ],
+    "description": {
+        "tags": [
+            "person",
+            "outdoor",
+            "grass",
+            "young",
+            "boy",
+            "man",
+            "standing",
+            "wearing",
+            "holding",
+            "small",
+            "little",
+            "phone",
+            "cellphone",
+            "kite",
+            "using",
+            "woman",
+            "girl",
+            "talking",
+            "shirt",
+            "field",
+            "water",
+            "board",
+            "blue",
+            "white",
+            "flying"
+        ],
+        "captions": [
+            {
+                "text": "a young boy standing in the grass",
+                "confidence": 0.55278155477118029
+            }
+        ]
+    },
+    "color": {
+        "dominantColorForeground": "White",
+        "dominantColorBackground": "Blue",
+        "dominantColors": [
+            "White",
+            "Blue"
+        ],
+        "accentColor": "7B7246",
+        "isBwImg": false
+    },
+    "requestId": "535d3ab8-7a02-43a6-9db8-c8046842a031",
+    "metadata": {
+        "height": 1131,
+        "width": 1698,
+        "format": "Jpeg"
+    }
+}
