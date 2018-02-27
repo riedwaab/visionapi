@@ -25,7 +25,7 @@ namespace ComputerVision
                 .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
             uriBase = Configuration["APIEndpoint"] + "/analyze";
-            subscriptionKey = Configuration["SubscriptionKey"];
+            subscriptionKey = Configuration["APIKey"];
 
 
             // Test if there are arguments
