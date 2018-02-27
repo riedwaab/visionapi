@@ -5,18 +5,28 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 
 namespace ComputerVision
 {
-    static class Program
+    public class Program
     {
-        // Replace the subscriptionKey string value with your valid subscription key.
-        const string subscriptionKey = "2239e4409d8b4765974a00e1bf57afce";
-        const string uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze";
+        public static string uriBase; // = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0";
+        public static string subscriptionKey;
+        public static  IConfiguration Configuration { get; set; }
 
 
         public static int Main(string[] args = null)
         {
+
+            // Get Configuration from appsettings.json
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+            Configuration = builder.Build();
+            uriBase = Configuration["APIEndpoint"] + "/analyze";
+            subscriptionKey = Configuration["SubscriptionKey"];
+
 
             // Test if there are arguments
             if (args.Length == 0)
@@ -30,18 +40,11 @@ namespace ComputerVision
 
             Console.WriteLine("Folder {0} has {1} files.", sDir, Images.Count());
             
-  //          if (Images.Count = 0)
-    //        {}
-      //          Console.WriteLine("Folder {0} has {1} files.", sDir, );
-        //        return 1;
-          //  }
-            
-            
             try
             {
                 foreach (string currentFile in Images)
                 {
-                    Console.WriteLine("Doing {0}.", currentFile);
+                    Console.WriteLine("Asking about {0}.", currentFile);
                     // Execute the REST API call.
                     MakeAnalysisRequest(currentFile);
                 }
